@@ -155,3 +155,58 @@ main .container div.card .card-footer div:nth-child(1) a:hover {
     background: white;
     border: 1px solid rgba(18, 171, 237, 0.6);
 }
+
+
+/*********  Footer *********/
+footer {
+    width: 100%;
+    height: 200px;
+    background: #d5d5d5;
+    border-top: 5px solid rgba(30, 144, 255, 0.3)
+}
+.footer-container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container div.sub-content {
+    flex-basis: 30%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #6b6b6b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-container div.sub-content:nth-of-type(2) {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.footer-container div.sub-content:nth-of-type(3) {
+    align-items: flex-end;
+}
+.footer-container div.sub-content div > i.fa {
+    color: black;
+    margin: 10px 5px 10px 0;
+}
+.footer-container div.sub-content:nth-of-type(3) div > a {
+    color: #6b6b6b;
+}
+.footer-container div.sub-content:nth-of-type(3) div > a:hover {
+    color: black;
+}
+.footer-container div.sub-content:nth-of-type(3) div > i.fa {
+    margin: 5px 0 5px 5px;
+}
+.footer-container div.sub-content:nth-of-type(3) div:nth-of-type(1) i.fa {
+    color: blue;
+}
+.footer-container div.sub-content:nth-of-type(3) div:nth-of-type(2) i.fa {
+    color: #1C9CED;
+}
+.footer-container div.sub-content:nth-of-type(3) div:nth-of-type(3) i.fa {
+    color: #F80900;
+}
