@@ -19,6 +19,7 @@ nav {
     height: 70px;
     padding: 0 20px;
     border-bottom: 5px solid rgba(30, 144, 255, 0.3);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +32,6 @@ nav div a {
 } 
 nav div a:hover {
     color: #767676;
-    /* border-bottom: 5px solid red; */
 }
 
 
@@ -56,13 +56,15 @@ nav div a:hover {
     text-align: center;
     margin: 0 0 20px;
 }
-#ban div a:nth-child(1) {
+#ban div a {
     font-size: 1.6rem;
     padding: 5px 20px;
     margin: 0 10px;
     color: white;
-    background: rgba(18,171,237, 0.6);
     border-radius: 20px;
+}
+#ban div a:nth-child(1) {
+    background: rgba(18,171,237, 0.6);
 }
 #ban div a:nth-child(1):hover {
     background: white;
@@ -70,12 +72,7 @@ nav div a:hover {
     border: 1px solid rgba(18,171,237, 0.6);
 }
 #ban div a:nth-child(2) {
-    font-size: 1.6rem;
-    padding: 5px 20px;
-    margin: 0 10px;
-    color: white;
     background: orange;
-    border-radius: 20px;
 }
 #ban div a:nth-child(2):hover {
     background: white;
@@ -88,8 +85,6 @@ nav div a:hover {
 main {
     width: 100%;
     background: #f5f5f5;
-    /* display: flex;
-    justify-content: center; */
 }
 main .container {
     width: 85%;
@@ -100,8 +95,7 @@ main .container {
     justify-content: space-between;
 }
 main .container div.card {
-    flex-basis: 31%;
-    /* flex-grow: 1; */
+    flex-basis: calc(33.33% - 15px);
     margin-bottom: 35px;
     box-shadow: 1px 1px 10px #cbcbcb;  
     
@@ -135,20 +129,21 @@ main .container div.card .card-footer {
 }
 
 main .container div.card .card-footer div:nth-child(1) {
-    width: 35%;
-    /* border: 1px solid red; */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
 main .container div.card .card-footer div:nth-child(1) a {
     height: 25px;
-    /* line-height: 25px; */
+    line-height: 25px;
     padding: 0 12px;
     background: rgba(18, 171, 237, 0.6);
     color: white;
     border-radius: 10px;
+}
+main .container div.card .card-footer div:nth-child(1) a:nth-of-type(1) {
+    margin-right: 10px;
 }
 main .container div.card .card-footer div:nth-child(1) a:hover {
     color: rgba(18, 171, 237, 0.6);
@@ -209,4 +204,63 @@ footer {
 }
 .footer-container div.sub-content:nth-of-type(3) div:nth-of-type(3) i.fa {
     color: #F80900;
+}
+
+
+
+/* Tablet version */
+@media screen and (max-width: 768px) {    
+
+    /*********  Banner *************/
+    #ban p {
+        width: 85%;
+    }
+    
+    /*********  Main  *************/
+    main .container {
+        width: 100%;
+    }
+    main .container div.card {
+        flex-basis: calc(50% - 15px);        
+    }
+    
+    /*********  Footer *********/
+    footer {
+        height: auto;
+    }
+    .footer-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer-container div.sub-content {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* mobile version */
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+        
+    /*********  navigation bar  *************/
+    nav {
+        padding: 0 10px;
+    }
+    nav div a {
+        margin: 0 10px;
+    }   
+    
+    /*********  Banner *************/
+    #ban {
+        height: 250px;
+    }
+    
+    /*********  Main  *************/
+    main .container div.card {
+        flex-basis: 100%;
+    }
 }
